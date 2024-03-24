@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"runtime"
+	"time"
 )
 
 func printStats(mem runtime.MemStats) {
@@ -19,10 +20,11 @@ func main() {
 	printStats(mem)
 
 	for i := 0; i < 10; i++ {
-		s := make([]byte, 500000000)
+		s := make([]byte, 100000000)
 		if s == nil {
 			fmt.Println("operation failed!")
 		}
+		time.Sleep(5 * time.Second)
 	}
 	printStats(mem)
 }
