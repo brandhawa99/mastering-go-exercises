@@ -3,8 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	i := 2
-	fmt.Println(&i)
+	i := -10
+	j := 25
+
+	pI := &i
+	pJ := &j
+
+	fmt.Println("pI memory:", pI)
+	fmt.Println("pJ memory:", pJ)
+	fmt.Println("pI value:", *pI)
+	fmt.Println("pJ value:", *pJ)
+
 }
 
 func getPointer(n *int) {
