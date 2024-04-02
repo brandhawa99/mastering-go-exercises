@@ -14,6 +14,19 @@ func main() {
 	fmt.Println("pI value:", *pI)
 	fmt.Println("pJ value:", *pJ)
 
+	//part 3
+
+	*pI = 123456
+	*pI--
+	fmt.Println("i:", i)
+
+	getPointer(pJ)
+	fmt.Println("j:", j)
+	k := returnPointer(12)
+
+	fmt.Println(*k)
+	fmt.Println(k)
+
 }
 
 func getPointer(n *int) {
