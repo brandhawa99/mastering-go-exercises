@@ -27,3 +27,17 @@ func addNode(t *Node, v int) int {
 	return addNode(t.Next, v)
 
 }
+
+func traverse(t *Node) {
+	if t == nil {
+		fmt.Println("-> Empty list!")
+		return
+	}
+
+	for t != nil {
+		fmt.Printf("%d ->", t.Value)
+		t = t.Next
+	}
+	fmt.Println()
+
+}
