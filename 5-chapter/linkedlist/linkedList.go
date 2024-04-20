@@ -41,3 +41,18 @@ func traverse(t *Node) {
 	fmt.Println()
 
 }
+
+func lookupNode(t *Node, v int) bool {
+	if root == nil {
+		t = &Node{v, nil}
+		root = t
+		return false
+	}
+	if v == t.Value {
+		return true
+	}
+	if t.Next == nil {
+		return false
+	}
+	return lookupNode(t.Next, v)
+}
