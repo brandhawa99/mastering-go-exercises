@@ -56,3 +56,16 @@ func lookupNode(t *Node, v int) bool {
 	}
 	return lookupNode(t.Next, v)
 }
+
+func size(t *Node) int {
+	if t == nil {
+		fmt.Println("-> Empty list!")
+		return 0
+	}
+	i := 0
+	for t != nil {
+		i++
+		t = t.Next
+	}
+	return i
+}
