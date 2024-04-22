@@ -69,3 +69,31 @@ func size(t *Node) int {
 	}
 	return i
 }
+
+func main() {
+	fmt.Println(root)
+	root = nil
+	traverse(root)
+	addNode(root, 1)
+	addNode(root, -1)
+	traverse(root)
+	addNode(root, 10)
+	addNode(root, 5)
+	addNode(root, 45)
+	addNode(root, 5)
+	addNode(root, 5)
+	traverse(root)
+	addNode(root, 100)
+	traverse(root)
+	if lookupNode(root, 100) {
+		fmt.Println("Node exists!")
+	} else {
+		fmt.Println("Node does not exist!")
+	}
+	if lookupNode(root, -100) {
+		fmt.Println("Node exists!")
+	} else {
+		fmt.Println("Node does not exist!")
+	}
+
+}
