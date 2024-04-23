@@ -35,7 +35,7 @@ func traverse(t *Node) {
 	}
 
 	for t != nil {
-		fmt.Printf("%d ->", t.Value)
+		fmt.Printf("%d -> ", t.Value)
 		t = t.Next
 	}
 	fmt.Println()
