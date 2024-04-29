@@ -13,3 +13,8 @@ func (n *heapFloat32) Pop() interface{} {
 func (n *heapFloat32) Push(x interface{}) {
 	*n = append(*n, x.(float32))
 }
+
+func (n heapFloat32) Len() int {
+
+	return len(n)
+}
