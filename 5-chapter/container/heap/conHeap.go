@@ -21,3 +21,7 @@ func (n heapFloat32) Len() int {
 func (n heapFloat32) Less(a, b int) bool {
 	return n[a] < n[b]
 }
+
+func (n heapFloat32) Swap(a, b int) {
+	n[a], n[b] = n[b], n[a]
+}
