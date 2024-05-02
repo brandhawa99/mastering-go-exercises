@@ -1,5 +1,10 @@
 package main
 
+import (
+	"container/heap"
+	"fmt"
+)
+
 type heapFloat32 []float32
 
 func (n *heapFloat32) Pop() interface{} {
@@ -24,4 +29,12 @@ func (n heapFloat32) Less(a, b int) bool {
 
 func (n heapFloat32) Swap(a, b int) {
 	n[a], n[b] = n[b], n[a]
+}
+
+func main() {
+	myHeap := &heapFloat32{1.2, 2.1, 3.1, -100.1}
+	heap.Init(myHeap)
+	size := len(*myHeap)
+	fmt.Printf("Heap size: %d\n", size)
+	fmt.Printf("%v\n", myHeap)
 }
