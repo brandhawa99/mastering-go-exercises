@@ -37,4 +37,11 @@ func main() {
 	size := len(*myHeap)
 	fmt.Printf("Heap size: %d\n", size)
 	fmt.Printf("%v\n", myHeap)
+
+	myHeap.Push(float32(-100.2))
+	myHeap.Push(float32(0.2))
+	fmt.Printf("Heap size: %d\n", len(*myHeap))
+	fmt.Printf("%v\n", myHeap)
+	heap.Init(myHeap)
+	fmt.Printf("%v\n", myHeap)
 }
